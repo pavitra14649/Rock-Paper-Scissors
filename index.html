@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <h1 class="game-title">🎮 Rock Paper Scissors 🎮</h1>
+        
+        <div class="game-area">
+            <div class="player-section">
+                <h2>You</h2>
+                <div class="choice-display" id="player-choice">❓</div>
+                <div class="score-card player">
+                    <span id="user-score">0</span>
+                </div>
+            </div>
+            
+            <div class="vs-section">
+                <div class="vs-text">VS</div>
+                <div class="countdown" id="countdown"></div>
+            </div>
+            
+            <div class="computer-section">
+                <h2>Computer</h2>
+                <div class="choice-display" id="computer-choice">❓</div>
+                <div class="score-card computer">
+                    <span id="computer-score">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="result-section">
+            <div class="result" id="result">Choose your weapon!</div>
+        </div>
+        
+        <div class="choices">
+            <button class="choice-btn rock" onclick="play('rock')" data-choice="rock">
+                <span class="emoji">🪨</span>
+                <span class="text">Rock</span>
+            </button>
+            <button class="choice-btn paper" onclick="play('paper')" data-choice="paper">
+                <span class="emoji">📄</span>
+                <span class="text">Paper</span>
+            </button>
+            <button class="choice-btn scissors" onclick="play('scissors')" data-choice="scissors">
+                <span class="emoji">✂️</span>
+                <span class="text">Scissors</span>
+            </button>
+        </div>
+        
+        <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
